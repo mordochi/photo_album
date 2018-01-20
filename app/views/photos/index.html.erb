@@ -1,0 +1,14 @@
+<section class="container box">
+
+ <% @photos.each do |photo| %>
+    <div class="block">
+     <h4 class="title"><%= photo.title %></h4>
+     <%= link_to 'Show', photo_path(photo), class: "btn btn-default btn-xs btn-space" %>
+     <%= link_to 'Edit', edit_photo_path(photo), class: "btn btn-default btn-xs btn-space" %>
+     <%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" }, class: "btn btn-default btn-xs btn-space" %>
+    </div>
+ <% end %>
+
+
+<%= link_to 'New Photo', new_photo_path, class: "btn btn-default btn-new" %>
+</section>

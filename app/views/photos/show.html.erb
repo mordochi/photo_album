@@ -1,0 +1,11 @@
+<div class="container box">
+  <%= image_tag @photo.file_location.url, size: "300x300", class: "img-responsive center-block" %></br>
+  <div class="content">
+    <p>主題</p><%= @photo.title %></br>
+    <p>日期</p><%= @photo.date %></br>
+    <p>描述</p><%= simple_format(@photo.description) %></br>
+ 
+
+    <p><%= link_to 'Back to index', photos_path, class: "btn btn-default" %></p>
+  </div>
+</div>
